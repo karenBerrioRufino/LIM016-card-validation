@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding-top: 0px;
+}
+body{
+    background: #ef32d9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*background-image: url(/src/imagenes/fondo.png);*/
+
+}
+h1{
+    font-family: 'Righteous', cursive;
+    font-size: 60px;
+    color: whitesmoke;
+    text-align: center;
+}
+h3{
+    font-family: 'Arsenal', sans-serif;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+/*FORMULARIO PARA INGRESAR DATOS*/
+.formCard{
+    /*background-color: chartreuse;*/
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+    position: relative;
+    margin-left: 80px;
+}
+.formCard input,
+.formCard select {
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+    font-size: 18px;
+    font-family: 'Arsenal', sans-serif;
+    width: 100%;   
+    color: black;
+}
+.formCard input:hover,
+.formCard select:hover{
+    border: 2px solid cadetblue;
+}
+.formCard input:focus,
+.formCard select:focus{
+    outline: cadetblue;
+    box-shadow:1px 7px 10px -5px gray;
+}
+
+#month{
+width: 100px;
+height: 25px;
+left: 68px;
+top: 541px;
+}
+#year{
+width: 100px;
+height: 25px;
+left: 235px;
+top: 541px;
+}
+.cvv{
+width: 130px;
+height: 37px;
+left: 419px;
+top: 541px;
+}
+label{
+    font-size: 18px;
+    font-family: 'Arsenal', sans-serif;
+    display: block;
+    color: black;
+    display: block ; /*para que ocupe todoel espacio*/ 
+}
+::placeholder{color: grey;}
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main input{
+    font-size: 30px;
+    height: 20px;
+    width: 30%;
+}
+
+/*BOTON VALIDAR*/
+.button{
+margin: 20px;
+width: 75%;
+height: 35px;
+left: 30px;
+position: absolute;
+border: 5px;
+background: rgba(9, 9, 9, 0.33);
+border-radius: 50px;
+cursor: pointer;
+font-family: Righteous;
+font-size: 18px;
+color: whitesmoke;
+}
+
+/*CARD - IMÁGEN*/
+.card{
+    width: 400px;
+    max-width: 350px;
+    padding: 30px;
+    float: right;
+    margin-top: -250px;
+    margin-right: 50px;
+    display: flex;
+}
+.vestido{
+position: absolute;
+width: 65px;
+height: 80px;
+left: 10px;
+top: 10px;
+}
+/*--------CONTENEDOR DE CHECK--------*/
+.containerCheck{ /*PARA PONERLE LA OPACIDAD DEL FONDO*/
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.buttonOk{
+text-align: center;
+width: 50px;
+height: 30px;
+border: 5px;
+background: rgb(18, 89, 221);
+border-radius: 50px;
+cursor: pointer;
+font-family: Righteous;
+font-size: 18px;
+color: whitesmoke;
+}
+            /*section #close {                  PARA LA BOLITA DE LA X
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: rgba(255, 0, 0, 0.738);
+                color: white;
+                border-radius: 50%;
+                line-height: 25px;
+                cursor: pointer;
+                font-weight: bolder;
+            }*/
+.divCheck{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    left: 350px;
+    bottom: 120px;
+    background-color: white; 
+    font-family: 'Roboto', sans-serif;
+    display:flexbox;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    border-radius: 10px;
+}
+.checkImg{
+width: 85px;
+height: 90px;
+left: 10px;
+top: 10px;
+position: center;
+}
+/*-------CONTENEDOR DE ERROR--------*/
+.containerError{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.divError{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    left: 350px;
+    bottom: 120px;
+    background-color: white; 
+    font-family: 'Roboto', sans-serif;
+    display:flexbox;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    border-radius: 10px;
+}
+.errorImg{
+width: 65px;
+height: 80px;
+left: 10px;
+top: 10px;
+}
+#obligatorio{
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    margin-top: 50px;
+    margin-left: 50px;
+    visibility: hidden;
+    width: 400px;
+    height: 30px;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+    padding-bottom: 20px;
+    
+    
+}

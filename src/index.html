@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img src="../src/imagenes/logo.png" alt="vestido" class="vestido">
+    <h1>CARD VALIDATION</h1>
+    <h3>FASHION SHOP</h3>
+  </header>
+  <main>
+    <form class="formCard">
+      <label for="cardNumber">CARD NUMBER</label>
+      <input type="text" id="cardNumber" name="cardNumber" maxlength="16" autocomplete="off"
+        placeholder="1234 1234 1234 1234" pattern="[0-9]+">
+      <br><br>
+      <label for="nameCard">NAME CARD</label>
+      <input type="text" id="nameCard" name="nameCard" placeholder="KAREN BERRIO" autocomplete="off">
+      <br><br>
+      <div class="flexbox">
+        <div class="validUntil">
+          <label for="validUntil">VALID UNTIL</label>
+          <select name="month" id="month">
+            <option disabled selected>MES</option>
+          </select>
+          <select name="year" id="year">
+            <option disabled selected>AÑO</option>
+          </select>
+        </div>
+        <div class="cvv">
+          <label for="vcc">VCC</label>
+          <input type="text" id="vcc" name="vcc" maxlength="4" placeholder="111" autocomplete="off">
+        </div>
+      </div>
+
+      <button type="submit" name="validate" id="validate" class="button">VALIDAR</button>
+      
+
+      <section class="containerCheck" id="containerCheck">
+        <div class="divCheck" id="divCheck">
+          <img src="../src/imagenes/correcto.png" alt="check" class="checkImg"><br>
+          <h2>Good Job!</h2>
+          <p>Los datos de tu tarjeta son válidos</p><br>
+          <button type="button" class="buttonOk" id="buttonOk">OK</button>
+        </div>
+      </section>
+
+      <section class="containerError" id="containerError">
+        <div class="divError" id="divError">
+          <img src="../src/imagenes/error.png" alt="error" class="errorImg"><br>
+          <h2>Oooops...</h2>
+          <p>Los datos de tu tarjeta son incorrectos</p><br>
+          <button type="button" class="buttonOk" id="buttonError">OK</button>
+        </div>
+      </section>
+    </form>
+    <div>
+      <img src="../src/imagenes/card.png" alt="card" class="card">
+    </div>
+    <P id="obligatorio"></P>
+  </main>
+  <footer>
+    <h5>© TODOS LOS DERECHOS RESERVADOS - 2021</h5>
+    <h5><span style="font-weight: bold;">&lt;L&gt; - Squad 2</span></h5>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
